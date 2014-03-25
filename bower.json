@@ -1,0 +1,25 @@
+{
+  "name": "project-template-test",
+  "version": "0.0.1",
+  "homepage": "https://github.com/luboskmetko/project-template-test",
+  "authors": [
+    "Lubos Kmetko <lubos@xhtmlized.com>"
+  ],
+  "description": "Project Template Test",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~1.10.2"
+  },
+  "devDependencies": {
+    "normalize-scss": "~3.0.0",
+    "jquery-colorbox": "~1.5.5"
+  }
+}

@@ -1,0 +1,7 @@
+@import "../bower_components/normalize-scss/normalize";
+@import "colorbox";
+@import "variables";
+
+body {
+  color: $fontColor;
+}
