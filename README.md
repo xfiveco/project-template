@@ -12,10 +12,15 @@ This is a test project template. Imagine this could be initial structure generat
 * **dist** - production / preview files are automatically generated here
 * *index.html* - project index
 
-
 ### Grunt tasks
 
+Various Grunt libraries are used to automate the following tasks:
 
+* Including HTML partials
+* Beautifying HTML / CSS / JS code in dist folder
+* Validating HTML code in dist folder
+* Merging and minifying JS libraries
+* Checking JS code with JSHint
 
 ## Installation
 
@@ -26,20 +31,20 @@ This is a test project template. Imagine this could be initial structure generat
 3. Install Grunt from the command line (skip if you have it installed already)
 
         npm install -g grunt-cli
-  
-4. Install [Bower](http://bower.io) (skip if you have it installed)
+
+4. Install [Bower](http://bower.io) from the command line (skip if you have it installed)
 
         npm install -g bower
 
 5. Install node packages (while in root project folder):
 
         npm install
-        
+
 6. Install bower dependencies (while in root project folder):
 
-        bower install  
+        bower install
 
-7. Open your browser at [http://localhost/your_project_folder](http://localhost/your_project_folder) to see the project index
+7. Open your browser at [http://localhost/your_project_folder](http://localhost/your_project_folder)
 
 
 ## Development
@@ -51,6 +56,4 @@ To re-compile HTML / SCSS file in real time you can use watch task
 
 this will start a task that will watch for changes in files and recompile them as needed.
 
-You can connect LiveReload
-
-
+You can connect with a LiveReload browser extension then to enable live reloads.
