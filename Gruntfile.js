@@ -29,17 +29,6 @@ module.exports = function(grunt) {
       }
     },
 
-    requirejs: {
-      dist: {
-        options: {
-          name: 'main',
-          baseUrl: 'src/js/',
-          mainConfigFile: 'src/js/main.js',
-          out: 'dist/js/main.js'
-        }
-      }
-    },
-
     useminPrepare: {
       html: 'dist/*.html',
       options: {
