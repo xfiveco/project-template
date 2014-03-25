@@ -53,8 +53,12 @@ Various Grunt libraries are used to automate the following tasks:
 6. Install bower dependencies (while in root project folder):
 
         bower install
+        
+7. Build the project
 
-7. Open your browser at [http://localhost/your_project_folder](http://localhost/your_project_folder)
+        grunt
+
+8. Open your browser at [http://localhost/your_project_folder](http://localhost/your_project_folder)
 
 
 ## Development
@@ -67,3 +71,7 @@ To re-compile HTML / SCSS file in real time you can use watch task
 this will start a task that will watch for changes in files and recompile them as needed.
 
 You can connect with a LiveReload browser extension then to enable live reloads.
+
+To rebuild the whole project and prettify / validate files use grunt task
+
+    grunt
