@@ -5,12 +5,22 @@ This is a test project template. Imagine this could be initial structure generat
 ## Project structure
 
 * **src** - source files, development is done here
+ * *bower_components* - 3rd party libraries managed via Bower
  * *includes* - HTML partials like head.html
  * *scss* - SCSS files
  * *js* - application JS files
  * *home.html, etc.* - HTML files composed from HTML partials
 * **dist** - production / preview files are automatically generated here
 * *index.html* - project index
+
+### 3rd party libraries
+
+3rd party libraries are managed via Bower, in this project we have:
+
+* normalize.css 
+* jQuery
+* modernizr
+* [Colorbox](http://www.jacklmoore.com/colorbox/)
 
 ### Grunt tasks
 
