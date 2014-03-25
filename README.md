@@ -1,2 +1,2 @@
-project-temmplate-test
+Project Template Test
 ======================
