@@ -27,7 +27,7 @@ This is a test project template. Imagine this could be initial structure generat
 
         npm install -g grunt-cli
   
-4. Install [Bower](http://bower.io) from the command line (skip if you have it installed)
+4. Install [Bower](http://bower.io) (skip if you have it installed)
 
         npm install -g bower
 
@@ -39,7 +39,7 @@ This is a test project template. Imagine this could be initial structure generat
 
         bower install  
 
-7. Open your browser at [http://localhost/your_project_folder](http://localhost/your_project_folder)
+7. Open your browser at [http://localhost/your_project_folder](http://localhost/your_project_folder) to see the project index
 
 
 ## Development
