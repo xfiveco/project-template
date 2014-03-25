@@ -1,39 +1,56 @@
-Usage
-=====
+# Overview
 
-Project is created with use of [Sass](http://sass-lang.com/) and prepared to be developed & build with [Grunt](http://gruntjs.com). It [Bower](http://bower.io) to manage project dependencies
+This is a test project template. Imagine this could be initial structure generated from our custom Yeoman generator.
+
+## Project structure
+
+* **src** - source files, development is done here
+ * *includes* - HTML partials like head.html
+ * *scss* - SCSS files
+ * *js* - application JS files
+ * *home.html, etc.* - HTML files composed from HTML partials
+* **dist** - production / preview files are automatically generated here
+* *index.html* - project index
 
 
-Build
---------
+### Grunt tasks
 
-To be able to utilize above tools & libraries, [Ruby](http://www.ruby-lang.org) & [node.js](http://nodejs.org) must be installed in system. After that dependecies must be installed.
 
-1. If there is na grunt installed in the system, do so via:
 
-  npm install -g grunt-cli
+## Installation
 
-2. If there is no bower installed in the system, do so via:
+1. Install [node.js](http://nodejs.org) (skip if you have it installed already)
+
+2. Install [Ruby](http://www.ruby-lang.org) (skip if you have it installed already)
+
+3. Install Grunt from the command line (skip if you have it installed already)
+
+        npm install -g grunt-cli
+  
+4. Install [Bower](http://bower.io) from the command line (skip if you have it installed)
 
         npm install -g bower
 
-3. Install node packages (while in root project folder):
+5. Install node packages (while in root project folder):
 
         npm install
+        
+6. Install bower dependencies (while in root project folder):
 
-4. Install bower dependencies (while in root project folder):
+        bower install  
 
-        bower install
+7. Open your browser at [http://localhost/your_project_folder](http://localhost/your_project_folder)
 
-5. Build project (while in root project folder):
 
-        grunt
+## Development
 
-Development
------------
 
-During development, to re-compile SCSS file in real time you can use watch task
+To re-compile HTML / SCSS file in real time you can use watch task
 
-  grunt watch
+    grunt watch
 
 this will start a task that will watch for changes in files and recompile them as needed.
+
+You can connect LiveReload
+
+
