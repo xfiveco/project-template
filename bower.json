@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "normalize-scss": "~3.0.0",
-    "jquery-colorbox": "~1.5.5"
+    "jquery-colorbox": "~1.5.5",
+    "modernizr": "~2.7.2"
   }
 }
