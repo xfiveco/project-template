@@ -1,10 +1,19 @@
 module.exports = function(grunt) {
 
+  require('time-grunt')(grunt);
+
+  require('jit-grunt')(grunt,  {
+    includereplace: 'grunt-include-replace',
+    useminPrepare: 'grunt-usemin',
+    validation: 'grunt-html-validation'
+  });
+
   // Project configuration.
   grunt.initConfig({
 
     pkg: grunt.file.readJSON('package.json'),
 
+    // HTML Includes
     includereplace: {
       dist: {
         files: [{
@@ -17,6 +26,53 @@ module.exports = function(grunt) {
       }
     },
 
+    useminPrepare: {
+      html: 'dist/*.html',
+      options: {
+        dest: 'dist',
+        root: 'src',
+        flow: {
+          steps: {'js': ['concat'] },
+          post: {}
+        }
+      }
+    },
+
+    usemin: {
+      html: 'dist/*.html'
+    },
+
+    clean: {
+      src: [".tmp"]
+    },
+
+    jsbeautifier: {
+      options : {
+        html: {
+          indentSize: 2
+        },
+        js: {
+          indentSize: 2
+        }
+      },
+
+      html: {
+        src: 'dist/*.html',
+      },
+
+      js: {
+        src: 'dist/js/main.js'
+      }
+    },
+
+    validation: {
+      src: ['dist/*.html'],
+      options: {
+        reset: true
+      }
+    },
+
+    // CSS
     sass: {
       dist: {
         options: {
@@ -29,18 +85,11 @@ module.exports = function(grunt) {
       }
     },
 
-    useminPrepare: {
-      html: 'dist/*.html',
-      options: {
-        dest: 'dist',
-        root: 'src'
-      }
+    cssbeautifier: {
+      files: ['dist/css/*.css']
     },
 
-    usemin: {
-      html: 'dist/*.html'
-    },
-
+    // JS
     copy: {
       files: {
         cwd: 'src/js/',
@@ -50,54 +99,44 @@ module.exports = function(grunt) {
       }
     },
 
-    clean: {
-      src: [".tmp"]
-    },
-
-    jsbeautifier: {
-      dist: {
-        src: ['dist/*.html', 'dist/js/main.js'],
-        options : {
-          html: {
-            indentSize: 2
-          },
-          js: {
-            indentSize: 2
-          }
-        }
-      }
-    },
-
-    cssbeautifier: {
-      files: ['dist/css/*.css']
-    },
-
-    validation: {
-      src: ['dist/*.html'],
-      options: {
-        reset: true
-      }
-    },
-
     jshint: {
-      src: ['dist/js/main.js'],
       options: {
-        jshintrc: true
+        jshintrc: true,
+        force: true
+      },
+      dist: {
+        src: ['dist/js/main.js'],
       }
     },
 
+    // Watch
     watch: {
       sass: {
-        files: 'src/scss/*.scss',
-        tasks: 'sass',
+        files: ['src/scss/*.scss'],
+        tasks: ['sass', 'cssbeautifier'],
         options: {
           livereload: true
         }
       },
 
-      includereplace: {
-        files: 'src/*.html',
-        tasks: 'includereplace',
+      html: {
+        files: ['src/*.html', 'src/includes/*.html'],
+        tasks: [
+          'includereplace',
+          'useminPrepare',
+          'concat',
+          'usemin',
+          'jsbeautifier:html',
+          'clean'
+        ],
+        options: {
+          livereload: true
+        }
+      },
+
+      js: {
+        files: 'src/js/*.js',
+        tasks: ['copy', 'jsbeautifier:js', 'jshint'],
         options: {
           livereload: true
         }
@@ -106,31 +145,26 @@ module.exports = function(grunt) {
 
   });
 
-  grunt.loadNpmTasks('grunt-include-replace');
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-usemin');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-jsbeautifier');
-  grunt.loadNpmTasks('grunt-cssbeautifier');
-  grunt.loadNpmTasks('grunt-html-validation');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-
   grunt.registerTask('default', [
+    // HTML
     'includereplace',
-    'sass',
     'useminPrepare',
     'concat',
-    'uglify',
     'usemin',
-    'copy',
-    'jsbeautifier',
+    'jsbeautifier:html',
+    'clean',
+
+    // CSS
+    'sass',
     'cssbeautifier',
+
+    // JS
+    'copy',
+    'jsbeautifier:js',
+
+    // Checks
     'validation',
-    'jshint',
-    'clean'
+    'jshint'
   ]);
+
 };
