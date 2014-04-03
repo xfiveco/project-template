@@ -125,7 +125,7 @@ module.exports = function(grunt) {
           from: '@@timestamp',
           to: '<%= grunt.template.today() %>'
         }, {
-          from: /=== \*\//g,
+          from: /=== \*\//g, // Add empty line after section & subsection comment
           to: '=== */\n'
         }]
       },
