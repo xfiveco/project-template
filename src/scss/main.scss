@@ -1,7 +1,30 @@
-@import "../bower_components/normalize-scss/normalize";
-@import "colorbox";
-@import "variables";
+/* ==========================================================================
 
-body {
-  color: $fontColor;
-}
+    Project: Project Template Test
+    Author: XHTMLized.com
+    Last updated: @@timestamp
+
+    1) Normalize styles
+    2) Common styles
+    3) Colorbox styles
+    4) Home
+    5) About
+
+   ========================================================================== */
+
+@import "../bower_components/normalize-scss/normalize";
+
+/* ==========================================================================
+   Common
+   ========================================================================== */
+
+@import "variables";
+@import "common";
+@import "colorbox";
+
+/* ==========================================================================
+   Pages
+   ========================================================================== */
+
+@import "home";
+@import "about";

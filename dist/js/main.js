@@ -1,3 +1,11 @@
+/* ==========================================================================
+
+    Project: Project Template Test
+    Author: XHTMLized.com
+    Last updated: Thu Apr 03 2014 14:13:26
+
+   ========================================================================== */
+
 (function($) {
 
   'use strict';
@@ -16,7 +24,7 @@
      * Output jQuery version
      */
     jQueryVersion: function() {
-      console.log('Running jQuery %s', $().jquery);
+      console.log('Running jQuery version %s', $().jquery);
     },
 
     initColorbox: function() {
