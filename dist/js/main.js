@@ -2,7 +2,7 @@
 
     Project: Project Template Test
     Author: XHTMLized.com
-    Last updated: @@timestamp
+    Last updated: Thu Apr 03 2014 14:57:02
 
    ========================================================================== */
 
@@ -24,7 +24,7 @@
      * Output jQuery version
      */
     jQueryVersion: function() {
-      console.log('Running jQuery version %s', $().jquery);
+      console.log('Running jQuery %s', $().jquery);
     },
 
     initColorbox: function() {

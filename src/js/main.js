@@ -24,7 +24,7 @@
      * Output jQuery version
      */
     jQueryVersion: function() {
-      console.log('Running jQuery version %s', $().jquery);
+      console.log('Running jQuery %s', $().jquery);
     },
 
     initColorbox: function() {

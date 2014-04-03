@@ -116,13 +116,26 @@ module.exports = function(grunt) {
       }
     },
 
+    // Remplacements in main.css and main.js
     replace: {
       css: {
         src: ['<%= xh.dist %>/css/main.css'],
-        overwrite: true,                 // overwrite matched source files
+        overwrite: true,
         replacements: [{
+          from: '@@timestamp',
+          to: '<%= grunt.template.today() %>'
+        }, {
           from: /=== \*\//g,
           to: '=== */\n'
+        }]
+      },
+
+      js: {
+        src: ['<%= xh.dist %>/js/main.js'],
+        overwrite: true,
+        replacements: [{
+          from: '@@timestamp',
+          to: '<%= grunt.template.today() %>'
         }]
       }
     },
