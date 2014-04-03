@@ -2,7 +2,7 @@
 
     Project: Project Template Test
     Author: XHTMLized.com
-    Last updated: Thu Apr 03 2014 14:10:37
+    Last updated: @@timestamp
 
     1) Normalize styles
     2) Common styles
@@ -700,7 +700,7 @@ body {
    ========================================================================== */
 
 .carousel {
-    width: 960px;
+    width: 900px;
 }
 
 /* About

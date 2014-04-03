@@ -2,7 +2,7 @@
 
     Project: Project Template Test
     Author: XHTMLized.com
-    Last updated: Thu Apr 03 2014 14:13:26
+    Last updated: @@timestamp
 
    ========================================================================== */
 

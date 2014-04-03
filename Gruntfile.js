@@ -5,7 +5,8 @@ module.exports = function(grunt) {
   require('jit-grunt')(grunt,  {
     includereplace: 'grunt-include-replace',
     useminPrepare: 'grunt-usemin',
-    validation: 'grunt-html-validation'
+    validation: 'grunt-html-validation',
+    replace: 'grunt-text-replace'
   });
 
   // Project configuration.
@@ -115,44 +116,13 @@ module.exports = function(grunt) {
       }
     },
 
-    // Replacements in main.css and main.js
     replace: {
       css: {
-        options: {
-          patterns: [
-            {
-              match: 'timestamp',
-              replacement: '<%= grunt.template.today() %>'
-            },
-            // Make CSS comments nicer
-            {
-              match: /=== \*\//g,
-              replacement: '=== */\n'
-            }
-          ]
-        },
-        files: [{
-          expand: true,
-          flatten: true,
-          src: ['<%= xh.dist %>/css/main.css'],
-          dest: '<%= xh.dist %>/css/'
-        }]
-      },
-
-      js: {
-        options: {
-          patterns: [
-            {
-              match: 'timestamp',
-              replacement: '<%= grunt.template.today() %>'
-            }
-          ]
-        },
-        files: [{
-          expand: true,
-          flatten: true,
-          src: ['<%= xh.dist %>/js/main.js'],
-          dest: '<%= xh.dist %>/js/'
+        src: ['<%= xh.dist %>/css/main.css'],
+        overwrite: true,                 // overwrite matched source files
+        replacements: [{
+          from: /=== \*\//g,
+          to: '=== */\n'
         }]
       }
     },
