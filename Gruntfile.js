@@ -157,7 +157,7 @@ module.exports = function(grunt) {
                     match = match.split('/').pop();
                     match = capitalize(match);
 
-                    if (match !== 'Variables' || match !== 'Mixins') {
+                    if (match !== 'Variables' && match !== 'Mixins') {
                       toc += '\n    ' + i + '. ' + match;
                       i++;
                     }
