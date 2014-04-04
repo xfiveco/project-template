@@ -3,28 +3,22 @@
     Project: Project Template Test
     Author: XHTMLized.com
     Last updated: @@timestamp
-
-    1) Normalize styles
-    2) Common styles
-    3) Colorbox styles
-    4) Home
-    5) About
+@@toc
 
    ========================================================================== */
 
+/* ==========================================================================
+   Libraries
+   ========================================================================== */
+
 @import "../bower_components/normalize-scss/normalize";
+@import "colorbox";
 
 /* ==========================================================================
-   Common
+   Custom Styling
    ========================================================================== */
 
 @import "variables";
 @import "common";
-@import "colorbox";
-
-/* ==========================================================================
-   Pages
-   ========================================================================== */
-
 @import "home";
 @import "about";

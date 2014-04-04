@@ -124,8 +124,53 @@ module.exports = function(grunt) {
         replacements: [{
           from: '@@timestamp',
           to: '<%= grunt.template.today() %>'
-        }, {
-          from: /=== \*\//g, // Add empty line after section & subsection comment
+        },
+        // Table of contents in main.css
+        {
+          from: '@@toc',
+          to: function () {
+
+            if (!grunt.file.exists('csstoc.json')) {
+                return '';
+            }
+
+            var toc_file = grunt.file.readJSON('csstoc.json')
+            var files = toc_file.results;
+            var toc = '';
+            var i = 1;
+            var match;
+
+            function capitalize(s) {
+              return s[0].toUpperCase() + s.slice(1);
+            }
+
+            for (var key in files) {
+              if (files.hasOwnProperty(key)) {
+
+                var results = files[key];
+
+                for (var key in results) {
+                  if (results.hasOwnProperty(key)) {
+
+                    match = results[key]['match'];
+                    match = match.replace(/"|'|@import|;|.scss/gi, "").trim();
+                    match = match.split('/').pop();
+                    match = capitalize(match);
+
+                    if (match !== 'Variables' || match !== 'Mixins') {
+                      toc += '\n    ' + i + '. ' + match;
+                      i++;
+                    }
+                  }
+                }
+              }
+            }
+            return toc;
+          }
+        },
+        // Add empty line after section & subsection comment
+        {
+          from: /=== \*\//g,
           to: '=== */\n'
         }]
       },
@@ -140,11 +185,25 @@ module.exports = function(grunt) {
       }
     },
 
+    // Create list of @imports
+    search: {
+      imports: {
+        files: {
+            src: ['<%= xh.src %>/scss/main.scss']
+        },
+        options: {
+          searchString: /@import[ \("']*([^;]+)[;\)"']*/g,
+          logFormat: "json",
+          logFile: "csstoc.json"
+        }
+      }
+    },
+
     // Watch
     watch: {
       scss: {
         files: ['<%= xh.src %>/scss/*.scss'],
-        tasks: ['sass', 'cssbeautifier', 'replace:css'],
+        tasks: ['sass', 'cssbeautifier', 'search', 'replace:css'],
         options: {
           livereload: true
         }
@@ -194,12 +253,12 @@ module.exports = function(grunt) {
     'jsbeautifier:js',
 
     // Replacements
+    'search',
     'replace',
 
     // Checks
     'validation',
-    'jshint',
-
+    'jshint'
   ]);
-
 };
+
