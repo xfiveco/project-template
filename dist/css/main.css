@@ -2,18 +2,15 @@
 
     Project: Project Template Test
     Author: XHTMLized.com
-    Last updated: Fri Apr 04 2014 15:00:12
+    Last updated: Mon Apr 07 2014 17:41:17
 
     1. Normalize
     2. Colorbox
     3. Common
-    4. Home
-    5. About
+    4. Wordpress
+    5. Home
+    6. About
 
-   ========================================================================== */
-
-/* ==========================================================================
-   Libraries
    ========================================================================== */
 
 /* ==========================================================================
@@ -692,8 +689,154 @@ th {
 /* Common
    ========================================================================== */
 
-body {
-    color: red;
+/* Acessibility navigation */
+.accessibility-nav {
+    position: absolute;
+    top: 0;
+    left: -9999em;
+    z-index: 1000;
+}
+
+.accessibility-nav a {
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+}
+
+.accessibility-nav a:active,
+.accessibility-nav a:focus {
+    left: 9999em;
+}
+
+.hide {
+    position: absolute !important;
+    left: -9999em !important;
+}
+
+/* Image Replacement */
+.ir {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.ir span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* Container */
+.container {
+    position: relative;
+    width: 960px;
+    margin: 0 auto;
+}
+
+/* Header */
+.site-name {
+    width: 150px;
+    height: 50px;
+}
+
+.site-name span {
+    background: url(../img/common/logo.png) no-repeat;
+}
+
+/* Navigation */
+/* Content */
+/* Sidebar */
+/* Footer */
+.footer {
+    clear: both;
+}
+
+/* WordPress Default Styling
+   ========================================================================== */
+
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter, div.aligncenter {
+    display: block;
+    margin: 5px auto;
+}
+
+.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-caption {
+    padding: 5px 3px 0 3px;
+    max-width: 96%;
+  /* Image does not overflow the content area */
+    text-align: center;
+    background: #fff;
+    border: 1px solid #f0f0f0;
+}
+
+.wp-caption.aligncenter {
+    margin: 5px auto 20px auto;
+}
+
+.wp-caption.alignnone {
+    margin: 5px auto 20px auto;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    width: auto;
+    height: auto;
+    max-width: 98.5%;
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+}
+
+.wp-caption p.wp-caption-text {
+    margin: 0;
+    padding: 0 4px 5px;
+    font-size: 11px;
+    line-height: 17px;
 }
 
 /* Home

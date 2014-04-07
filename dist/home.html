@@ -21,27 +21,25 @@
 <body>
 
   <div class="container">
-    <nav id="accessibility-nav">
+
+    <nav class="accessibility-nav">
       <ol>
         <li><a href="#navigation">Skip to navigation</a>
         </li>
         <li><a href="#content">Skip to content</a>
         </li>
-        <li><a href="#sidebar">Skip to sidebar</a>
-        </li>
       </ol>
     </nav>
     <!-- / accessibility-nav -->
-    <hr />
 
-    <header id="header">
+    <header class="header">
       <h1 class="ir site-name">Site Name<span></span></h1>
       <!-- <a href="#" rel="index" title="Go to homepage" class="ir site-name">Site Name<span></span></a> -->
     </header>
     <!-- / header -->
-    <hr />
 
-    <nav id="navigation">
+
+    <nav class="navigation" id="navigation">
       <ul>
         <li><a href="#">Link</a>
         </li>
@@ -58,18 +56,21 @@
     <!-- / navigation -->
 
 
-    <div id="content">
-      <h1>Heading</h1>
-      <p>Content</p>
-      <a class="colorbox" href="img/daisy.jpg">ColorBox Test</a>
-    </div>
-    <!-- / content -->
+    <div class="container">
+      <div class="content" id="content">
+        <p>content</p>
+        <a class="colorbox" href="img/daisy.jpg">ColorBox Test</a>
+      </div>
+      <!-- / content -->
 
-    <aside id="sidebar">
+    </div>
+    <!-- / container -->
+
+    <aside class="sidebar">
       <p>sidebar</p>
     </aside>
-    <!-- / sidebar -->
-    <footer id="footer">
+
+    <footer class="footer">
       <p>footer</p>
     </footer>
     <!-- / footer -->
@@ -77,8 +78,14 @@
   </div>
   <!-- / container -->
 
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="js/jquery.min.js">\x3C/script>')
+  </script>
+  <script src="js/jquery.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
+  <script src="http://cssonsails.org/xprecise/xprecise.min.js"></script>
 
 
 </body>
