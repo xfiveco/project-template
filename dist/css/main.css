@@ -2,14 +2,11 @@
 
     Project: Project Template Test
     Author: XHTMLized.com
-    Last updated: Mon Apr 07 2014 17:41:17
+    Last updated: Mon Apr 07 2014 18:11:10
 
     1. Normalize
-    2. Colorbox
-    3. Common
-    4. Wordpress
-    5. Home
-    6. About
+    2. Common
+    3. Home
 
    ========================================================================== */
 
@@ -428,260 +425,6 @@ th {
   padding: 0;
 }
 
-/*
-    Colorbox Core Style:
-    The following CSS is consistent between example themes and should not be altered.
-*/
-#colorbox, #cboxOverlay, #cboxWrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  overflow: hidden;
-}
-
-#cboxWrapper {
-  max-width: none;
-}
-
-#cboxOverlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-}
-
-#cboxMiddleLeft, #cboxBottomLeft {
-  clear: left;
-}
-
-#cboxContent {
-  position: relative;
-}
-
-#cboxLoadedContent {
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-#cboxTitle {
-  margin: 0;
-}
-
-#cboxLoadingOverlay, #cboxLoadingGraphic {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow {
-  cursor: pointer;
-}
-
-.cboxPhoto {
-  float: left;
-  margin: auto;
-  border: 0;
-  display: block;
-  max-width: none;
-  -ms-interpolation-mode: bicubic;
-}
-
-.cboxIframe {
-  width: 100%;
-  height: 100%;
-  display: block;
-  border: 0;
-  padding: 0;
-  margin: 0;
-}
-
-#colorbox, #cboxContent, #cboxLoadedContent {
-  box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-}
-
-/*
-    User Style:
-    Change the following styles to modify the appearance of Colorbox.  They are
-    ordered & tabbed in a way that represents the nesting of the generated HTML.
-*/
-#cboxOverlay {
-  background: url(../img/colorbox/overlay.png) repeat 0 0;
-}
-
-#colorbox {
-  outline: 0;
-}
-
-#cboxTopLeft {
-  width: 21px;
-  height: 21px;
-  background: url(../img/colorbox/controls.png) no-repeat -101px 0;
-}
-
-#cboxTopRight {
-  width: 21px;
-  height: 21px;
-  background: url(../img/colorbox/controls.png) no-repeat -130px 0;
-}
-
-#cboxBottomLeft {
-  width: 21px;
-  height: 21px;
-  background: url(../img/colorbox/controls.png) no-repeat -101px -29px;
-}
-
-#cboxBottomRight {
-  width: 21px;
-  height: 21px;
-  background: url(../img/colorbox/controls.png) no-repeat -130px -29px;
-}
-
-#cboxMiddleLeft {
-  width: 21px;
-  background: url(../img/colorbox/controls.png) left top repeat-y;
-}
-
-#cboxMiddleRight {
-  width: 21px;
-  background: url(../img/colorbox/controls.png) right top repeat-y;
-}
-
-#cboxTopCenter {
-  height: 21px;
-  background: url(../img/colorbox/border.png) 0 0 repeat-x;
-}
-
-#cboxBottomCenter {
-  height: 21px;
-  background: url(../img/colorbox/border.png) 0 -29px repeat-x;
-}
-
-#cboxContent {
-  background: #fff;
-  overflow: hidden;
-}
-
-.cboxIframe {
-  background: #fff;
-}
-
-#cboxError {
-  padding: 50px;
-  border: 1px solid #ccc;
-}
-
-#cboxLoadedContent {
-  margin-bottom: 28px;
-}
-
-#cboxTitle {
-  position: absolute;
-  bottom: 4px;
-  left: 0;
-  text-align: center;
-  width: 100%;
-  color: #949494;
-}
-
-#cboxCurrent {
-  position: absolute;
-  bottom: 4px;
-  left: 58px;
-  color: #949494;
-}
-
-#cboxLoadingOverlay {
-  background: url(../img/colorbox/loading_background.png) no-repeat center center;
-}
-
-#cboxLoadingGraphic {
-  background: url(../img/colorbox/loading.gif) no-repeat center center;
-}
-
-/* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
-#cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {
-  border: 0;
-  padding: 0;
-  margin: 0;
-  overflow: visible;
-  width: auto;
-  background: none;
-}
-
-/* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
-#cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {
-  outline: 0;
-}
-
-#cboxSlideshow {
-  position: absolute;
-  bottom: 4px;
-  right: 30px;
-  color: #0092ef;
-}
-
-#cboxPrevious {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: url(../img/colorbox/controls.png) no-repeat -75px 0;
-  width: 25px;
-  height: 25px;
-  text-indent: -9999px;
-}
-
-#cboxPrevious:hover {
-  background-position: -75px -25px;
-}
-
-#cboxNext {
-  position: absolute;
-  bottom: 0;
-  left: 27px;
-  background: url(../img/colorbox/controls.png) no-repeat -50px 0;
-  width: 25px;
-  height: 25px;
-  text-indent: -9999px;
-}
-
-#cboxNext:hover {
-  background-position: -50px -25px;
-}
-
-#cboxClose {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background: url(../img/colorbox/controls.png) no-repeat -25px 0;
-  width: 25px;
-  height: 25px;
-  text-indent: -9999px;
-}
-
-#cboxClose:hover {
-  background-position: -25px -25px;
-}
-
-/*
-  The following fixes a problem where IE7 and IE8 replace a PNG's alpha transparency with a black fill
-  when an alpha filter (opacity change) is set on the element or ancestor element.  This style is not applied to or needed in IE9.
-  See: http://jacklmoore.com/notes/ie-transparency-problems/
-*/
-.cboxIE #cboxTopLeft,
-.cboxIE #cboxTopCenter,
-.cboxIE #cboxTopRight,
-.cboxIE #cboxBottomLeft,
-.cboxIE #cboxBottomCenter,
-.cboxIE #cboxBottomRight,
-.cboxIE #cboxMiddleLeft,
-.cboxIE #cboxMiddleRight {
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
-}
-
 /* ==========================================================================
    Custom Styling
    ========================================================================== */
@@ -691,60 +434,56 @@ th {
 
 /* Acessibility navigation */
 .accessibility-nav {
-    position: absolute;
-    top: 0;
-    left: -9999em;
-    z-index: 1000;
+  position: absolute;
+  top: 0;
+  left: -9999em;
+  z-index: 1000;
 }
-
 .accessibility-nav a {
-    position: absolute;
-    top: 0;
-    white-space: nowrap;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
 }
-
 .accessibility-nav a:active,
 .accessibility-nav a:focus {
-    left: 9999em;
+  left: 9999em;
 }
 
 .hide {
-    position: absolute !important;
-    left: -9999em !important;
+  position: absolute !important;
+  left: -9999em !important;
 }
 
 /* Image Replacement */
 .ir {
-    display: block;
-    position: relative;
-    overflow: hidden;
+  display: block;
+  position: relative;
+  overflow: hidden;
 }
-
 .ir span {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 /* Container */
 .container {
-    position: relative;
-    width: 960px;
-    margin: 0 auto;
+  position: relative;
+  width: 960px;
+  margin: 0 auto;
 }
 
 /* Header */
 .site-name {
-    width: 150px;
-    height: 50px;
+  width: 150px;
+  height: 50px;
 }
-
 .site-name span {
-    background: url(../img/common/logo.png) no-repeat;
+  background: url(../img/common/logo.png) no-repeat;
 }
 
 /* Navigation */
@@ -752,103 +491,9 @@ th {
 /* Sidebar */
 /* Footer */
 .footer {
-    clear: both;
-}
-
-/* WordPress Default Styling
-   ========================================================================== */
-
-.alignnone {
-    margin: 5px 20px 20px 0;
-}
-
-.aligncenter, div.aligncenter {
-    display: block;
-    margin: 5px auto;
-}
-
-.alignright {
-    float: right;
-    margin: 5px 0 20px 20px;
-}
-
-.alignleft {
-    float: left;
-    margin: 5px 20px 20px 0;
-}
-
-.aligncenter {
-    display: block;
-    margin: 5px auto 5px auto;
-}
-
-a img.alignright {
-    float: right;
-    margin: 5px 0 20px 20px;
-}
-
-a img.alignleft {
-    float: left;
-    margin: 5px 20px 20px 0;
-}
-
-a img.aligncenter {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.wp-caption {
-    padding: 5px 3px 0 3px;
-    max-width: 96%;
-  /* Image does not overflow the content area */
-    text-align: center;
-    background: #fff;
-    border: 1px solid #f0f0f0;
-}
-
-.wp-caption.aligncenter {
-    margin: 5px auto 20px auto;
-}
-
-.wp-caption.alignnone {
-    margin: 5px auto 20px auto;
-}
-
-.wp-caption.alignleft {
-    margin: 5px 20px 20px 0;
-}
-
-.wp-caption.alignright {
-    margin: 5px 0 20px 20px;
-}
-
-.wp-caption img {
-    width: auto;
-    height: auto;
-    max-width: 98.5%;
-    margin: 0;
-    padding: 0;
-    border: 0 none;
-}
-
-.wp-caption p.wp-caption-text {
-    margin: 0;
-    padding: 0 4px 5px;
-    font-size: 11px;
-    line-height: 17px;
+  clear: both;
 }
 
 /* Home
    ========================================================================== */
 
-.carousel {
-    width: 940px;
-}
-
-/* About
-   ========================================================================== */
-
-.photo {
-    float: left;
-}

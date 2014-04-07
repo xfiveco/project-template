@@ -2,7 +2,7 @@
 
     Project: Project Template Test
     Author: XHTMLized.com
-    Last updated: Mon Apr 07 2014 17:41:17
+    Last updated: Mon Apr 07 2014 18:13:51
 
    ========================================================================== */
 
@@ -16,19 +16,22 @@
      * Init Function
      */
     init: function() {
-      App.jQueryVersion();
-      App.initColorbox();
+      // App.feature1();
+      // App.feature2();
     },
 
     /**
-     * Output jQuery version
+     * Custom feature 1
      */
-    jQueryVersion: function() {
-      console.log('Running jQuery %s', $().jquery);
+    feature1: function() {
+
     },
 
-    initColorbox: function() {
-      $(".colorbox").colorbox();
+    /**
+     * Custom feature 2
+     */
+    feature2: function() {
+
     }
 
   };
