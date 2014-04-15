@@ -2,37 +2,25 @@
 
     Project: Project Template Test
     Author: XHTMLized.com
-    Last updated: Mon Apr 07 2014 17:41:17
+    Last updated: Tue Apr 15 2014 19:03:57
 
-    1. Normalize
-    2. Colorbox
-    3. Common
-    4. Wordpress
-    5. Home
-    6. About
+    1. Normalize.css
+    2. Home
 
    ========================================================================== */
 
-/* ==========================================================================
-   Normalize.scss settings
-   ========================================================================== */
-
-/* Base
-   ========================================================================== */
-
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
- * 3. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
- *    `em` units.
  */
 html {
-    font-family: sans-serif;
+  font-family: sans-serif;
   /* 1 */
-    -ms-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
   /* 2 */
-    -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
   /* 2 */
 }
 
@@ -40,7 +28,7 @@ html {
  * Remove default margin.
  */
 body {
-    margin: 0;
+  margin: 0;
 }
 
 /* HTML5 display definitions
@@ -63,30 +51,30 @@ main,
 nav,
 section,
 summary {
-    display: block;
+  display: block;
 }
 
 /**
- * 1. Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ * 1. Correct `inline-block` display not defined in IE 8/9.
  * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
  */
 audio,
 canvas,
 progress,
 video {
-    display: inline-block;
+  display: inline-block;
   /* 1 */
-    vertical-align: baseline;
+  vertical-align: baseline;
   /* 2 */
 }
 
 /**
- * Prevents modern browsers from displaying `audio` without controls.
+ * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
 audio:not([controls]) {
-    display: none;
-    height: 0;
+  display: none;
+  height: 0;
 }
 
 /**
@@ -95,7 +83,7 @@ audio:not([controls]) {
  */
 [hidden],
 template {
-    display: none;
+  display: none;
 }
 
 /* Links
@@ -105,63 +93,64 @@ template {
  * Remove the gray background color from active links in IE 10.
  */
 a {
-    background: transparent;
+  background: transparent;
 }
 
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-a:active, a:hover {
-    outline: 0;
+a:active,
+a:hover {
+  outline: 0;
 }
 
 /* Text-level semantics
    ========================================================================== */
 
 /**
- * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
  */
 abbr[title] {
-    border-bottom: 1px dotted;
+  border-bottom: 1px dotted;
 }
 
 /**
- * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
 b,
 strong {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 /**
- * Address styling not present in Safari 5 and Chrome.
+ * Address styling not present in Safari and Chrome.
  */
 dfn {
-    font-style: italic;
+  font-style: italic;
 }
 
 /**
  * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari 5, and Chrome.
+ * contexts in Firefox 4+, Safari, and Chrome.
  */
 h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
+  font-size: 2em;
+  margin: 0.67em 0;
 }
 
 /**
- * Addresses styling not present in IE 8/9.
+ * Address styling not present in IE 8/9.
  */
 mark {
-    background: #ff0;
-    color: #000;
+  background: #ff0;
+  color: #000;
 }
 
 /**
  * Address inconsistent and variable font size in all browsers.
  */
 small {
-    font-size: 80%;
+  font-size: 80%;
 }
 
 /**
@@ -169,74 +158,72 @@ small {
  */
 sub,
 sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
 }
 
 sup {
-    top: -0.5em;
+  top: -0.5em;
 }
 
 sub {
-    bottom: -0.25em;
+  bottom: -0.25em;
 }
 
 /* Embedded content
    ========================================================================== */
 
 /**
- * 1. Remove border when inside `a` element in IE 8/9/10.
- * 2. Improves image quality when scaled in IE 7.
+ * Remove border when inside `a` element in IE 8/9/10.
  */
 img {
-    border: 0;
+  border: 0;
 }
 
 /**
- * Correct overflow displayed oddly in IE 9.
+ * Correct overflow not hidden in IE 9/10/11.
  */
 svg:not(:root) {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 /* Grouping content
    ========================================================================== */
 
 /**
- * Address margin not present in IE 8/9 and Safari 5.
+ * Address margin not present in IE 8/9 and Safari.
  */
 figure {
-    margin: 1em 40px;
+  margin: 1em 40px;
 }
 
 /**
  * Address differences between Firefox and other browsers.
  */
 hr {
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    height: 0;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
 }
 
 /**
  * Contain overflow in all browsers.
  */
 pre {
-    overflow: auto;
+  overflow: auto;
 }
 
 /**
  * Address odd `em`-unit font size rendering in all browsers.
- * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
  */
 code,
 kbd,
 pre,
 samp {
-    font-family: monospace, monospace;
-    font-size: 1em;
+  font-family: monospace, monospace;
+  font-size: 1em;
 }
 
 /* Forms
@@ -251,18 +238,17 @@ samp {
  *    Known issue: affects color of disabled elements.
  * 2. Correct font properties not being inherited.
  * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
- * 4. Improves appearance and consistency in all browsers.
  */
 button,
 input,
 optgroup,
 select,
 textarea {
-    color: inherit;
+  color: inherit;
   /* 1 */
-    font: inherit;
+  font: inherit;
   /* 2 */
-    margin: 0;
+  margin: 0;
   /* 3 */
 }
 
@@ -270,7 +256,7 @@ textarea {
  * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
 button {
-    overflow: visible;
+  overflow: visible;
 }
 
 /**
@@ -281,7 +267,7 @@ button {
  */
 button,
 select {
-    text-transform: none;
+  text-transform: none;
 }
 
 /**
@@ -290,16 +276,14 @@ select {
  * 2. Correct inability to style clickable `input` types in iOS.
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
- * 4. Removes inner spacing in IE 7 without affecting normal text inputs.
- *    Known issue: inner spacing remains in IE 6.
  */
 button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-    -webkit-appearance: button;
+  -webkit-appearance: button;
   /* 2 */
-    cursor: pointer;
+  cursor: pointer;
   /* 3 */
 }
 
@@ -308,7 +292,7 @@ input[type="submit"] {
  */
 button[disabled],
 html input[disabled] {
-    cursor: default;
+  cursor: default;
 }
 
 /**
@@ -316,8 +300,8 @@ html input[disabled] {
  */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-    border: 0;
-    padding: 0;
+  border: 0;
+  padding: 0;
 }
 
 /**
@@ -325,19 +309,21 @@ input::-moz-focus-inner {
  * the UA stylesheet.
  */
 input {
-    line-height: normal;
+  line-height: normal;
 }
 
 /**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
- *    Known issue: excess padding remains in IE 6.
  */
 input[type="checkbox"],
 input[type="radio"] {
-    box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
-    padding: 0;
+  padding: 0;
   /* 2 */
 }
 
@@ -387,13 +373,11 @@ fieldset {
 /**
  * 1. Correct `color` not being inherited in IE 8/9/10/11.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
- * 3. Corrects text not wrapping in Firefox 3.
- * 4. Corrects alignment displayed oddly in IE 6/7.
  */
 legend {
-    border: 0;
+  border: 0;
   /* 1 */
-    padding: 0;
+  padding: 0;
   /* 2 */
 }
 
@@ -401,7 +385,7 @@ legend {
  * Remove default vertical scrollbar in IE 8/9/10/11.
  */
 textarea {
-    overflow: auto;
+  overflow: auto;
 }
 
 /**
@@ -428,427 +412,18 @@ th {
   padding: 0;
 }
 
-/*
-    Colorbox Core Style:
-    The following CSS is consistent between example themes and should not be altered.
-*/
-#colorbox, #cboxOverlay, #cboxWrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  overflow: hidden;
-}
-
-#cboxWrapper {
-  max-width: none;
-}
-
-#cboxOverlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-}
-
-#cboxMiddleLeft, #cboxBottomLeft {
-  clear: left;
-}
-
-#cboxContent {
-  position: relative;
-}
-
-#cboxLoadedContent {
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-#cboxTitle {
-  margin: 0;
-}
-
-#cboxLoadingOverlay, #cboxLoadingGraphic {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow {
-  cursor: pointer;
-}
-
-.cboxPhoto {
-  float: left;
-  margin: auto;
-  border: 0;
-  display: block;
-  max-width: none;
-  -ms-interpolation-mode: bicubic;
-}
-
-.cboxIframe {
-  width: 100%;
-  height: 100%;
-  display: block;
-  border: 0;
-  padding: 0;
-  margin: 0;
-}
-
-#colorbox, #cboxContent, #cboxLoadedContent {
-  box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-}
-
-/*
-    User Style:
-    Change the following styles to modify the appearance of Colorbox.  They are
-    ordered & tabbed in a way that represents the nesting of the generated HTML.
-*/
-#cboxOverlay {
-  background: url(../img/colorbox/overlay.png) repeat 0 0;
-}
-
-#colorbox {
-  outline: 0;
-}
-
-#cboxTopLeft {
-  width: 21px;
-  height: 21px;
-  background: url(../img/colorbox/controls.png) no-repeat -101px 0;
-}
-
-#cboxTopRight {
-  width: 21px;
-  height: 21px;
-  background: url(../img/colorbox/controls.png) no-repeat -130px 0;
-}
-
-#cboxBottomLeft {
-  width: 21px;
-  height: 21px;
-  background: url(../img/colorbox/controls.png) no-repeat -101px -29px;
-}
-
-#cboxBottomRight {
-  width: 21px;
-  height: 21px;
-  background: url(../img/colorbox/controls.png) no-repeat -130px -29px;
-}
-
-#cboxMiddleLeft {
-  width: 21px;
-  background: url(../img/colorbox/controls.png) left top repeat-y;
-}
-
-#cboxMiddleRight {
-  width: 21px;
-  background: url(../img/colorbox/controls.png) right top repeat-y;
-}
-
-#cboxTopCenter {
-  height: 21px;
-  background: url(../img/colorbox/border.png) 0 0 repeat-x;
-}
-
-#cboxBottomCenter {
-  height: 21px;
-  background: url(../img/colorbox/border.png) 0 -29px repeat-x;
-}
-
-#cboxContent {
-  background: #fff;
-  overflow: hidden;
-}
-
-.cboxIframe {
-  background: #fff;
-}
-
-#cboxError {
-  padding: 50px;
-  border: 1px solid #ccc;
-}
-
-#cboxLoadedContent {
-  margin-bottom: 28px;
-}
-
-#cboxTitle {
-  position: absolute;
-  bottom: 4px;
-  left: 0;
-  text-align: center;
-  width: 100%;
-  color: #949494;
-}
-
-#cboxCurrent {
-  position: absolute;
-  bottom: 4px;
-  left: 58px;
-  color: #949494;
-}
-
-#cboxLoadingOverlay {
-  background: url(../img/colorbox/loading_background.png) no-repeat center center;
-}
-
-#cboxLoadingGraphic {
-  background: url(../img/colorbox/loading.gif) no-repeat center center;
-}
-
-/* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
-#cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {
-  border: 0;
-  padding: 0;
-  margin: 0;
-  overflow: visible;
-  width: auto;
-  background: none;
-}
-
-/* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
-#cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {
-  outline: 0;
-}
-
-#cboxSlideshow {
-  position: absolute;
-  bottom: 4px;
-  right: 30px;
-  color: #0092ef;
-}
-
-#cboxPrevious {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: url(../img/colorbox/controls.png) no-repeat -75px 0;
-  width: 25px;
-  height: 25px;
-  text-indent: -9999px;
-}
-
-#cboxPrevious:hover {
-  background-position: -75px -25px;
-}
-
-#cboxNext {
-  position: absolute;
-  bottom: 0;
-  left: 27px;
-  background: url(../img/colorbox/controls.png) no-repeat -50px 0;
-  width: 25px;
-  height: 25px;
-  text-indent: -9999px;
-}
-
-#cboxNext:hover {
-  background-position: -50px -25px;
-}
-
-#cboxClose {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background: url(../img/colorbox/controls.png) no-repeat -25px 0;
-  width: 25px;
-  height: 25px;
-  text-indent: -9999px;
-}
-
-#cboxClose:hover {
-  background-position: -25px -25px;
-}
-
-/*
-  The following fixes a problem where IE7 and IE8 replace a PNG's alpha transparency with a black fill
-  when an alpha filter (opacity change) is set on the element or ancestor element.  This style is not applied to or needed in IE9.
-  See: http://jacklmoore.com/notes/ie-transparency-problems/
-*/
-.cboxIE #cboxTopLeft,
-.cboxIE #cboxTopCenter,
-.cboxIE #cboxTopRight,
-.cboxIE #cboxBottomLeft,
-.cboxIE #cboxBottomCenter,
-.cboxIE #cboxBottomRight,
-.cboxIE #cboxMiddleLeft,
-.cboxIE #cboxMiddleRight {
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
-}
-
 /* ==========================================================================
    Custom Styling
    ========================================================================== */
 
-/* Common
-   ========================================================================== */
-
-/* Acessibility navigation */
-.accessibility-nav {
-    position: absolute;
-    top: 0;
-    left: -9999em;
-    z-index: 1000;
-}
-
-.accessibility-nav a {
-    position: absolute;
-    top: 0;
-    white-space: nowrap;
-}
-
-.accessibility-nav a:active,
-.accessibility-nav a:focus {
-    left: 9999em;
-}
-
-.hide {
-    position: absolute !important;
-    left: -9999em !important;
-}
-
-/* Image Replacement */
-.ir {
-    display: block;
-    position: relative;
-    overflow: hidden;
-}
-
-.ir span {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
-
-/* Container */
-.container {
-    position: relative;
-    width: 960px;
-    margin: 0 auto;
-}
-
-/* Header */
-.site-name {
-    width: 150px;
-    height: 50px;
-}
-
-.site-name span {
-    background: url(../img/common/logo.png) no-repeat;
-}
-
-/* Navigation */
-/* Content */
-/* Sidebar */
-/* Footer */
-.footer {
-    clear: both;
-}
-
-/* WordPress Default Styling
-   ========================================================================== */
-
-.alignnone {
-    margin: 5px 20px 20px 0;
-}
-
-.aligncenter, div.aligncenter {
-    display: block;
-    margin: 5px auto;
-}
-
-.alignright {
-    float: right;
-    margin: 5px 0 20px 20px;
-}
-
-.alignleft {
-    float: left;
-    margin: 5px 20px 20px 0;
-}
-
-.aligncenter {
-    display: block;
-    margin: 5px auto 5px auto;
-}
-
-a img.alignright {
-    float: right;
-    margin: 5px 0 20px 20px;
-}
-
-a img.alignleft {
-    float: left;
-    margin: 5px 20px 20px 0;
-}
-
-a img.aligncenter {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.wp-caption {
-    padding: 5px 3px 0 3px;
-    max-width: 96%;
-  /* Image does not overflow the content area */
-    text-align: center;
-    background: #fff;
-    border: 1px solid #f0f0f0;
-}
-
-.wp-caption.aligncenter {
-    margin: 5px auto 20px auto;
-}
-
-.wp-caption.alignnone {
-    margin: 5px auto 20px auto;
-}
-
-.wp-caption.alignleft {
-    margin: 5px 20px 20px 0;
-}
-
-.wp-caption.alignright {
-    margin: 5px 0 20px 20px;
-}
-
-.wp-caption img {
-    width: auto;
-    height: auto;
-    max-width: 98.5%;
-    margin: 0;
-    padding: 0;
-    border: 0 none;
-}
-
-.wp-caption p.wp-caption-text {
-    margin: 0;
-    padding: 0 4px 5px;
-    font-size: 11px;
-    line-height: 17px;
-}
-
 /* Home
    ========================================================================== */
 
-.carousel {
-    width: 940px;
+body {
+  color: #ff0000;
 }
 
-/* About
-   ========================================================================== */
-
-.photo {
-    float: left;
+h1 {
+  font-size: 32px;
 }
+

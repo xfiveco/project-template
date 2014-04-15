@@ -92,6 +92,18 @@ module.exports = function(grunt) {
       }
     },
 
+    // Less
+    less: {
+      dist: {
+        options: {
+          path: 'src/bower_components/'
+        },
+        files: {
+          '<%= xh.dist %>/css/main.css': '<%= xh.src %>/less/main.less'
+        }
+      }
+    },
+
     cssbeautifier: {
       files: ['<%= xh.dist %>/css/*.css'],
     },
@@ -172,7 +184,14 @@ module.exports = function(grunt) {
         {
           from: /=== \*\//g,
           to: '=== */\n'
-        }]
+        },
+        // LESS
+        {
+          from: /\}/g,
+          to: '}\n'
+        }
+
+        ]
       },
 
       js: {
@@ -189,7 +208,7 @@ module.exports = function(grunt) {
     search: {
       imports: {
         files: {
-            src: ['<%= xh.src %>/scss/main.scss']
+            src: ['<%= xh.src %>/less/main.less']
         },
         options: {
           searchString: /@import[ \("']*([^;]+)[;\)"']*/g,
@@ -201,9 +220,9 @@ module.exports = function(grunt) {
 
     // Watch
     watch: {
-      scss: {
-        files: ['<%= xh.src %>/scss/*.scss'],
-        tasks: ['sass', 'cssbeautifier', 'search', 'replace:css'],
+      less: {
+        files: ['<%= xh.src %>/less/*.less'],
+        tasks: ['less', 'cssbeautifier', 'search', 'replace:css'],
         options: {
           livereload: true
         }
@@ -245,8 +264,8 @@ module.exports = function(grunt) {
     'clean',
 
     // CSS
-    'sass',
-    'cssbeautifier',
+    'less',
+    // 'cssbeautifier',
 
     // JS
     'copy',
