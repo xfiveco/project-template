@@ -17,7 +17,7 @@ This is a test project template. Imagine this could be initial structure generat
 
 3rd party libraries are managed via Bower, in this project we have:
 
-* normalize.css 
+* normalize.css
 * jQuery
 * modernizr
 * [Colorbox](http://www.jacklmoore.com/colorbox/)
@@ -39,30 +39,22 @@ Various Grunt libraries are used to automate the following tasks:
 2. Install [Ruby](http://www.ruby-lang.org) (skip if you have it installed already)
 
 3. Install [Sass](http://sass-lang.com/install) from the command line (skip if you have it installed already)
- 
+
         gem install sass
 
 4. Install Grunt from the command line (skip if you have it installed already)
 
         npm install -g grunt-cli
 
-5. Install [Bower](http://bower.io) from the command line (skip if you have it installed)
-
-        npm install -g bower
-
-6. Install node packages (while in root project folder):
+5. Install node packages (while in root project folder):
 
         npm install
 
-7. Install bower dependencies (while in root project folder):
-
-        bower install
-        
-8. Build the project
+6. Build the project
 
         grunt
 
-9. Open your browser at [http://localhost/your_project_folder](http://localhost/your_project_folder)
+7. Open your browser at [http://localhost/your_project_folder](http://localhost/your_project_folder)
 
 
 ## Development
