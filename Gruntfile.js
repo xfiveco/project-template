@@ -93,6 +93,13 @@ module.exports = function(grunt) {
       }
     },
 
+    autoprefixer: {
+      main: {
+        src: '<%= xh.dist %>/css/main.css',
+        dest: '<%= xh.dist %>/css/main.css'
+      }
+    },
+
     cssbeautifier: {
       files: ['<%= xh.dist %>/css/*.css'],
     },
@@ -204,7 +211,7 @@ module.exports = function(grunt) {
     watch: {
       scss: {
         files: ['<%= xh.src %>/scss/*.scss'],
-        tasks: ['sass', 'cssbeautifier', 'search', 'replace:css'],
+        tasks: ['sass', 'autoprefixer', 'cssbeautifier', 'search', 'replace:css'],
         options: {
           livereload: true
         }
@@ -247,6 +254,7 @@ module.exports = function(grunt) {
 
     // CSS
     'sass',
+    'autoprefixer',
     'cssbeautifier',
 
     // JS
