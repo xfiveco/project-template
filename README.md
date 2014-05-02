@@ -1,6 +1,6 @@
 # Overview
 
-This is a test project template. Imagine this could be initial structure generated from our custom Yeoman generator.
+Project template is a simple template for front-end projects.
 
 ## Project structure
 
@@ -20,7 +20,6 @@ This is a test project template. Imagine this could be initial structure generat
 * normalize.css
 * jQuery
 * modernizr
-* [Colorbox](http://www.jacklmoore.com/colorbox/)
 
 ### Grunt tasks
 
@@ -50,11 +49,15 @@ Various Grunt libraries are used to automate the following tasks:
 
         npm install
 
-6. Build the project
+6. Install bower dependencies (while in root project folder):
+
+        bower install
+
+7. Build the project
 
         grunt
 
-7. Open your browser at [http://localhost/your_project_folder](http://localhost/your_project_folder)
+8. Open your browser at [http://localhost/your_project_folder](http://localhost/your_project_folder)
 
 
 ## Development
