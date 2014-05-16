@@ -1,5 +1,7 @@
 # Overview
 
+**Project template was replaced with [XH Generator](https://github.com/xhtmlized/generator-xh).**
+
 Project template is a simple template for front-end projects.
 
 ## Project structure
